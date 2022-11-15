@@ -1,4 +1,4 @@
-package frc.robot.modules;
+/*package frc.robot.modules;
 
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
@@ -97,3 +97,4 @@ public class SwerveModule {
         turningMotor.set(0);
     }
 }
+ */

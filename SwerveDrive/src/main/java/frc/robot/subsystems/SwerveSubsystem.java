@@ -19,13 +19,31 @@ public class SwerveSubsystem extends SubsystemBase {
     backLeftModule = new SwerveModuleBasic(SwerveDrive.BACK_LEFT_MOTOR,SwerveDrive.BACK_LEFT_ROTATION,false,false);
     backRightModule = new SwerveModuleBasic(SwerveDrive.BACK_RIGHT_MOTOR,SwerveDrive.BACK_RIGHT_ROTATION,false,false);
   }
-  public void drive(double speed,double rotation){
-    frontLeftModule.drive(speed,rotation);
-    frontRightModule.drive(speed,rotation);
-    backLeftModule.drive(speed,rotation);
-    backRightModule.drive(speed,rotation);
-  }
-  public void setZero(){
+  public void drive(double speedStrafe,double directionStrafe,double speedRotation, double directionRotation,int motor){
+    double x = directionStrafe;
+    double y = speedStrafe;
+    double rX = directionRotation;
+    double rY = speedRotation;
+    //double actPower = Math.sqrt((difX * difX) + (difY * difY));
+    double actSpeed = (y * 0.5) + (rY * 0.5);
+    double actDirection = (x*0.5) + (rX * 0.5);
+    double degrees = Math.atan(actSpeed/actDirection);
+
+    if (motor == 1){
+      frontLeftModule.drive(actSpeed,degrees);
+    }
+    else if (motor == 2){
+      frontRightModule.drive(actSpeed,degrees);
+    }
+    else if (motor == 3){
+      backLeftModule.drive(actSpeed,degrees);
+    }
+    else{
+      backRightModule.drive(actSpeed,degrees);
+    }
+    
+    
+    
     
   }
 

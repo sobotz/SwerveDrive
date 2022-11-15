@@ -15,5 +15,7 @@ public class SwerveModuleBasic {
     public void drive(double speed, double rotation){
         driveMotor.set(ControlMode.PercentOutput,speed);
         turnMotor.set(ControlMode.PercentOutput,rotation);
+        //turnMotor.set(ControlMode.Position,Math.atan(speed/rotation));
+        
     }
 }
