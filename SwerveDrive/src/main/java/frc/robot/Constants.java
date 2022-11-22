@@ -13,7 +13,7 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    public final class SwerveDrive{
+    public final class SwerveConstants{
         
         public static final int FRONT_RIGHT_ROTATION = 1;
         public static final int FRONT_RIGHT_MOTOR = 2;
@@ -23,6 +23,14 @@ public final class Constants {
         public static final int BACK_RIGHT_MOTOR = 6;
         public static final int BACK_LEFT_ROTATION = 7;
         public static final int BACK_LEFT_MOTOR = 8;
+        public static final int kP = 0;
+        public static final int kI = 0;
+        public static final int kD = 0;
+        public static final int FRONT_RIGHT_SENSOR = 1;
+        public static final int FRONT_LEFT_SENSOR = 3;
+        public static final int BACK_RIGHT_SENSOR = 5;
+        public static final int BACK_LEFT_SENSOR = 7;
+        
         
     }
 }

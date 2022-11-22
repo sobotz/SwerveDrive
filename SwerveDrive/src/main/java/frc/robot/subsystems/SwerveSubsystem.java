@@ -8,16 +8,16 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.modules.SwerveModuleBasic;
-import frc.robot.Constants.SwerveDrive;
+import frc.robot.Constants.SwerveConstants;
 
 public class SwerveSubsystem extends SubsystemBase {
   /** Creates a new SwerveSubsystem. */
   SwerveModuleBasic frontLeftModule, frontRightModule, backLeftModule, backRightModule;
   public SwerveSubsystem() {
-    frontLeftModule = new SwerveModuleBasic(SwerveDrive.FRONT_LEFT_MOTOR,SwerveDrive.FRONT_LEFT_ROTATION,false,false);
-    frontRightModule = new SwerveModuleBasic(SwerveDrive.FRONT_RIGHT_MOTOR,SwerveDrive.FRONT_RIGHT_ROTATION,false,false);
-    backLeftModule = new SwerveModuleBasic(SwerveDrive.BACK_LEFT_MOTOR,SwerveDrive.BACK_LEFT_ROTATION,false,false);
-    backRightModule = new SwerveModuleBasic(SwerveDrive.BACK_RIGHT_MOTOR,SwerveDrive.BACK_RIGHT_ROTATION,false,false);
+    frontLeftModule = new SwerveModuleBasic(SwerveConstants.FRONT_LEFT_MOTOR,SwerveConstants.FRONT_LEFT_ROTATION,false,false);
+    frontRightModule = new SwerveModuleBasic(SwerveConstants.FRONT_RIGHT_MOTOR,SwerveConstants.FRONT_RIGHT_ROTATION,false,false);
+    backLeftModule = new SwerveModuleBasic(SwerveConstants.BACK_LEFT_MOTOR,SwerveConstants.BACK_LEFT_ROTATION,false,false);
+    backRightModule = new SwerveModuleBasic(SwerveConstants.BACK_RIGHT_MOTOR,SwerveConstants.BACK_RIGHT_ROTATION,false,false);
   }
   public void drive(double speedStrafe,double directionStrafe,double speedRotation, double directionRotation,int motor){
     double x = directionStrafe;
