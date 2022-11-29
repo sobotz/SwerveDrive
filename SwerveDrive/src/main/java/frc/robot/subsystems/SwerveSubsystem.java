@@ -14,11 +14,12 @@ public class SwerveSubsystem extends SubsystemBase {
   /** Creates a new SwerveSubsystem. */
   SwerveModuleBasic frontLeftModule, frontRightModule, backLeftModule, backRightModule;
   public SwerveSubsystem() {
-    frontLeftModule = new SwerveModuleBasic(SwerveConstants.FRONT_LEFT_MOTOR,SwerveConstants.FRONT_LEFT_ROTATION,false,false);
-    frontRightModule = new SwerveModuleBasic(SwerveConstants.FRONT_RIGHT_MOTOR,SwerveConstants.FRONT_RIGHT_ROTATION,false,false);
-    backLeftModule = new SwerveModuleBasic(SwerveConstants.BACK_LEFT_MOTOR,SwerveConstants.BACK_LEFT_ROTATION,false,false);
-    backRightModule = new SwerveModuleBasic(SwerveConstants.BACK_RIGHT_MOTOR,SwerveConstants.BACK_RIGHT_ROTATION,false,false);
+    frontLeftModule = new SwerveModuleBasic(SwerveConstants.FRONT_LEFT_MOTOR,SwerveConstants.FRONT_LEFT_ROTATION,SwerveConstants.FRONT_LEFT_SENSOR,false,false);
+    frontRightModule = new SwerveModuleBasic(SwerveConstants.FRONT_RIGHT_MOTOR,SwerveConstants.FRONT_RIGHT_ROTATION,SwerveConstants.FRONT_RIGHT_SENSOR,false,false);
+    backLeftModule = new SwerveModuleBasic(SwerveConstants.BACK_LEFT_MOTOR,SwerveConstants.BACK_LEFT_ROTATION,SwerveConstants.BACK_LEFT_SENSOR,false,false);
+    backRightModule = new SwerveModuleBasic(SwerveConstants.BACK_RIGHT_MOTOR,SwerveConstants.BACK_RIGHT_ROTATION,SwerveConstants.BACK_RIGHT_SENSOR,false,false);
   }
+  //Drive method, send information to SwerveModuleBasic in the module folder
   public void drive(double speedStrafe,double directionStrafe,double speedRotation, double directionRotation,int motor){
     double x = directionStrafe;
     double y = speedStrafe;
@@ -28,7 +29,7 @@ public class SwerveSubsystem extends SubsystemBase {
     double actSpeed = (y * 0.5) + (rY * 0.5);
     double actDirection = (x*0.5) + (rX * 0.5);
     double degrees = Math.atan(actSpeed/actDirection);
-
+    //Calls method from SwerveDriveBasics
     if (motor == 1){
       frontLeftModule.drive(actSpeed,degrees);
     }
