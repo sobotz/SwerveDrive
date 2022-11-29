@@ -26,10 +26,11 @@ public final class Constants {
         public static final int kP = 0;
         public static final int kI = 0;
         public static final int kD = 0;
-        public static final int FRONT_RIGHT_SENSOR = 1;
-        public static final int FRONT_LEFT_SENSOR = 3;
-        public static final int BACK_RIGHT_SENSOR = 5;
-        public static final int BACK_LEFT_SENSOR = 7;
+        public static final int FRONT_RIGHT_SENSOR = 9;
+        public static final int FRONT_LEFT_SENSOR = 10;
+        public static final int BACK_RIGHT_SENSOR = 11;
+        public static final int BACK_LEFT_SENSOR = 12;
+        public static final int MAX_SPEED = 1;
         
         
     }
