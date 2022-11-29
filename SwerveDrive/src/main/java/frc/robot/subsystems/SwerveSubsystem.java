@@ -47,6 +47,12 @@ public class SwerveSubsystem extends SubsystemBase {
     
     
   }
+  /*public void stop(){
+    frontLeftModule.stop();
+    frontRightModule.stop();
+    backLeftModule.stop();
+    backRightModule.stop();
+  }*/
 
   @Override
   public void periodic() {

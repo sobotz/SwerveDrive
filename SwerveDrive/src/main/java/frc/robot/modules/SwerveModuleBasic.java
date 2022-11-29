@@ -27,6 +27,10 @@ public class SwerveModuleBasic {
         //turnMotor.set(ControlMode.Position,Math.atan(speed/rotation));
         
     }
+    /*public void stop(){
+      driveMotor.set(ControlMode.PercentOutput,0);
+      turnMotor.set(ControlMode.PercentOutput,0);
+    }*/
     public void periodic(){
       
     }

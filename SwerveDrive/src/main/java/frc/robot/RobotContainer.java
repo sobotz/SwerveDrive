@@ -21,15 +21,22 @@ import edu.wpi.first.wpilibj2.command.Command;
  */
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
-  private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
-  private final SwerveSubsystem m_swerveSubsystem = new SwerveSubsystem();
-  private final Joystick m_driverJoystick = new Joystick(0);
+  private final ExampleSubsystem m_exampleSubsystem;
+  private final SwerveSubsystem m_swerveSubsystem;
+  private final Joystick m_driverJoystick;
+  private final Joystick m_operatorJoystick;
 
-  private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
-  private final SwerveCommand m_swerveCommand = new SwerveCommand(m_swerveSubsystem,m_driverJoystick);
+  private final ExampleCommand m_autoCommand;
+  private final SwerveCommand m_swerveCommand;
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
+    m_exampleSubsystem = new ExampleSubsystem();
+    m_swerveSubsystem = new SwerveSubsystem();
+    m_driverJoystick = new Joystick(0);
+    m_operatorJoystick = new Joystick(1);
+    m_autoCommand = new ExampleCommand(m_exampleSubsystem);
+    m_swerveCommand = new SwerveCommand(m_swerveSubsystem,m_driverJoystick);
     // Configure the button bindings
     configureButtonBindings();
   }
