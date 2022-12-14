@@ -14,23 +14,24 @@ package frc.robot;
  */
 public final class Constants {
     public final class SwerveConstants{
-        
-        public static final int FRONT_RIGHT_ROTATION = 1;
-        public static final int FRONT_RIGHT_MOTOR = 2;
-        public static final int FRONT_LEFT_ROTATION = 3;
-        public static final int FRONT_LEFT_MOTOR = 4;
-        public static final int BACK_RIGHT_ROTATION = 5;
-        public static final int BACK_RIGHT_MOTOR = 6;
-        public static final int BACK_LEFT_ROTATION = 7;
-        public static final int BACK_LEFT_MOTOR = 8;
+        public static final int FRONT_LEFT_ROTATION = 0;
+        public static final int FRONT_LEFT_MOTOR = 1;
+        public static final int FRONT_RIGHT_ROTATION = 2;
+        public static final int FRONT_RIGHT_MOTOR = 3;
+        public static final int BACK_LEFT_ROTATION = 4;
+        public static final int BACK_LEFT_MOTOR = 5;
+        public static final int BACK_RIGHT_ROTATION = 6;
+        public static final int BACK_RIGHT_MOTOR = 7;
+
+        public static final int FRONT_RIGHT_SENSOR = 8;
+        public static final int FRONT_LEFT_SENSOR = 9;
+        public static final int BACK_RIGHT_SENSOR = 10;
+        public static final int BACK_LEFT_SENSOR = 11;
+
+        public static final int MAX_SPEED = 1;
         public static final int kP = 0;
         public static final int kI = 0;
         public static final int kD = 0;
-        public static final int FRONT_RIGHT_SENSOR = 9;
-        public static final int FRONT_LEFT_SENSOR = 10;
-        public static final int BACK_RIGHT_SENSOR = 11;
-        public static final int BACK_LEFT_SENSOR = 12;
-        public static final int MAX_SPEED = 1;
         
         
     }
